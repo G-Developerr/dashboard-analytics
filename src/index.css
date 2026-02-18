@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+/* Custom animations */
+
+@layer utilities {
+    @keyframes blob {
+        0%,
+        100% {
+            transform: translate(0px, 0px) scale(1);
+        }
+        33% {
+            transform: translate(40px, -60px) scale(1.15);
+        }
+        66% {
+            transform: translate(-30px, 30px) scale(0.9);
+        }
+    }
+    @keyframes scan {
+        0% {
+            top: -10%;
+        }
+        100% {
+            top: 110%;
+        }
+    }
+    .animate-blob {
+        animation: blob 8s infinite;
+    }
+    .animation-delay-2000 {
+        animation-delay: 2s;
+    }
+    .animation-delay-4000 {
+        animation-delay: 4s;
+    }
+    .animate-scan {
+        animation: scan 4s linear infinite;
+    }
+}
+
+
+/* Force full screen */
+
+html,
+body,
+#root {
+    width: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+}
