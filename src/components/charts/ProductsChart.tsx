@@ -124,7 +124,7 @@ const ProductsChart: React.FC<ProductsChartProps> = ({ products = [], isDark = f
             radius={[4, 4, 0, 0]}
             animationDuration={1500}
             animationBegin={300}>
-            {data.map((entry, index) => (
+            {data.map((_, index) => (
               <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
             ))}
           </Bar>
